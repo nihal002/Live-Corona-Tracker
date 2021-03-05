@@ -1,0 +1,46 @@
+//to open live server 
+
+npx http-server
+
+
+// distance between two coordinates of earth can be calculated according\
+
+        Problem can be solved using Haversine formula:
+
+The great circle distance or the orthodromic distance is the shortest distance between two points on a sphere (or the surface of Earth). 
+In order to use this method, we need to have the co-ordinates of point A and point B.
+The great circle method is chosen over other methods.
+First, convert the latitude and longitude values from decimal degrees to radians. 
+For this divide the values of longitude and latitude of both the points by 180/pi.
+The value of pi is 22/7.
+The value of 180/pi is approximately 57.29577951.
+If we want to calculate the distance between two places in miles, use the value 3, 963, which is the radius of Earth.
+If we want to calculate the distance between two places in kilometers, use the value 6, 378.8, which is the radius of Earth.
+
+
+Find the value of the latitude in radians:
+
+Value of Latitude in Radians, lat = Latitude / (180/pi) OR
+
+Value of Latitude in Radians, lat = Latitude / 57.29577951
+
+Find the value of longitude in radians:
+
+Value of Longitude in Radians, long = Longitude / (180/pi) OR
+
+Value of Longitude in Radians, long = Longitude / 57.29577951
+
+
+
+
+Get the co-ordinates of point A in terms of latitude and longitude. Use the above conversion method to convert the values of latitude and longitude in radians. I will call it as lat1 and long1. Do the same for the co-ordinates of Point B and get lat2 and long2.
+
+distance between point A and point B use the following formula:
+
+Distance, d = 3963.0 * arccos[(sin(lat1) * sin(lat2)) + cos(lat1) * cos(lat2) * cos(long2 – long1)]
+
+The obtained distance, d, is in miles. If you want your value to be in units of kilometers, multiple d by 1.609344.
+
+d in kilometers = 1.609344 * d in miles
+
+Thus you can have the shortest distance between two places on Earth using the great circle distance approach.
